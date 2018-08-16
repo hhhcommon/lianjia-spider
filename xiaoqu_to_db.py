@@ -32,9 +32,9 @@ def create_prompt_text():
 if __name__ == '__main__':
     # 设置目标数据库
     # mysql or mongodb or excel
-    # database = "mysql"
+    database = "mysql"
     # database = "mongodb"
-    database = "excel"
+    # database = "excel"
     db = None
     collection = None
     workbook = None
@@ -42,7 +42,7 @@ if __name__ == '__main__':
     if database == "mysql":
         import records
 
-        db = records.Database('mysql://root:123456@localhost/lianjia?charset=utf8', encoding='utf-8')
+        db = records.Database('mysql://root:123@localhost/lianjia?charset=utf8', encoding='utf-8')
     elif database == "mongodb":
         from pymongo import MongoClient
 

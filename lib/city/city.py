@@ -57,6 +57,11 @@ def get_chinese_city(en):
     """
     return cities.get(en, None)
 
+def get_city_list():
+    city_info = list()
+    for en_name, ch_name in cities.items():
+        city_info.append(en_name)
+    return city_info
 
 if __name__ == '__main__':
     print(get_chinese_city("sh"))
